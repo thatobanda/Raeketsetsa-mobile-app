@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.andreasschrade.androidtemplate">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Main">
+        <activity
+            android:name=".ui.quote.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.quote.ListActivity" />
+        <activity
+            android:name=".ui.quote.ArticleDetailActivity"
+            android:label=""
+            android:parentActivityName="ui.quote.ListActivity"
+            android:theme="@style/Base.Theme" />
+        <activity
+            android:name=".ui.ViewSamplesActivity"
+            android:label="Samples"
+            android:parentActivityName=".ui.quote.ListActivity" />
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".ui.quote.ListActivity" />
+        <activity android:name=".ui.quote.About" />
+        <activity android:name=".ui.quote.Faq" />
+        <activity android:name=".ui.quote.Contact" />
+        <activity android:name=".ui.quote.InfoActivity" />
+        <activity android:name=".ui.quote.ProgrammesActivity"></activity>
+    </application>
+
+</manifest>
